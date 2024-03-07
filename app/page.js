@@ -220,7 +220,7 @@ export default function Home() {
         <div>
           <ul className="space-y-1">
             {[
-              { name: "Link Sprout", github: "https://github.com/ixaxtav/link-sprout", link: "https://link-sprout.web.app/ixaxtav", stack: "(SvelteKit, Tailwindcss, Firebase, Typescript)" },
+              { name: "Link Sprout", github: "https://github.com/ixaxtav/link-sprout", link: "https://link-sprout.web.app", stack: "(SvelteKit, Tailwindcss, Firebase, Typescript)" },
               { name: "Task Management App", github: "https://github.com/ixaxtav/task-management-app", link: "https://ixaxtav.github.io/simple-task-management-app/ ", stack: "(HTML, CSS)" },
               { name: "BMI Calculator", github: "https://github.com/ixaxtav/bmi-calculator", link: "https://ixaxtav.github.io/bmi-calculator/ ", stack: "(HTML, CSS)" },
               { name: "Todo List", github: "https://github.com/ixaxtav/todo-list", link: "https://ixaxtav.github.io/todo-list/", stack: "(React, Typescript)" },
