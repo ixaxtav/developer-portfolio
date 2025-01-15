@@ -1,6 +1,7 @@
 import { MiscProject } from "./components/MiscProject";
 
 export default function Home() {
+  console.log("1152025");
   return (
     <div>
       <main className="mx-auto max-w-7xl px-4 pt-6 lg:px-8">
@@ -9,7 +10,9 @@ export default function Home() {
             <p className="mono whitespace-nowrap">👨🏽‍💻 Coding Cool Things</p>
             <hr className="w-full mx-2 border-black" />
           </div>
-          <h1 className="text-2xl mb-2 display whitespace-nowrap">Ixax Tavarez</h1>
+          <h1 className="text-2xl mb-2 display whitespace-nowrap">
+            Ixax Tavarez
+          </h1>
           <div className="flex items-center space-x-2 w-full justify-center sm:justify-normal">
             <hr className="w-full hidden sm:block mx-2 border-black" />
             <a href="https://www.linkedin.com/in/ixaxtavarez" className="link">
@@ -33,19 +36,30 @@ export default function Home() {
           <div className="flex items-center w-full">
             <hr className="w-full border-black border-2" />
           </div>
-          <p className="mono whitespace-nowrap border border-black px-4 py-1">@ixaxtav</p>
+          <p className="mono whitespace-nowrap border border-black px-4 py-1">
+            @ixaxtav
+          </p>
           <div className="flex items-center w-full">
             <hr className="w-full border-black border-2" />
           </div>
         </section>
         <section className="flex  flex-col sm:flex-row items-center gap-4 sm:gap-10 mt-4">
-          <img className="inline-block h-48 w-48 sm:h-72 sm:w-72 rounded-full border-4 border-black post-image" src="avatar.png" alt="my-headshot" />
+          <img
+            className="inline-block h-48 w-48 sm:h-72 sm:w-72 rounded-full border-4 border-black post-image"
+            src="avatar.png"
+            alt="my-headshot"
+          />
           <p className="display text-xl sm:text-3xl">
             Hello World! I'm{" "}
-            <a href="https://www.linkedin.com/in/ixaxtavarez" className="highlight font-bold">
+            <a
+              href="https://www.linkedin.com/in/ixaxtavarez"
+              className="highlight font-bold"
+            >
               Ixax
             </a>
-            , your go-to guy for both front-end and back-end web development. Here in my portfolio, you'll see how I turn complex ideas into cool, user-friendly websites. Feel free to explore my work!
+            , your go-to guy for both front-end and back-end web development.
+            Here in my portfolio, you'll see how I turn complex ideas into cool,
+            user-friendly websites. Feel free to explore my work!
           </p>
         </section>
         <hr className="double-separator" />
@@ -83,12 +97,17 @@ export default function Home() {
           <div className="border-black">
             <div className="flex items-center gap-1">
               <h2 className="display text-lg sm:text-2xl">DataRemote</h2>
-              <span className="badge bg-black text-white text-xs rounded p-1">Current</span>
+              <span className="badge bg-black text-white text-xs rounded p-1">
+                Current
+              </span>
             </div>
             <p className="mono">Sr. Full Stack Developer (Jan 2022)</p>
           </div>
         </div>
-        <a href="https://www.linkedin.com/in/ixaxtavarez" className="flex items-center mt-4 gap-2">
+        <a
+          href="https://www.linkedin.com/in/ixaxtavarez"
+          className="flex items-center mt-4 gap-2"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
@@ -132,18 +151,39 @@ export default function Home() {
           <div className="w-96">
             <h2 className="display text-lg sm:text-2xl py-3">ARA</h2>
             <p className="mono">
-              DataRemote's ARA Device Management Platform offers a secure and efficient solution for device provisioning, management, and troubleshooting. Key features include real-time access,
-              RESTful API, live notifications, advanced security with role-based access control and encryption, and a scalable device hierarchy. ARA delivers a unified user experience, acting as a
-              remote portal to local device interfaces.
+              DataRemote's ARA Device Management Platform offers a secure and
+              efficient solution for device provisioning, management, and
+              troubleshooting. Key features include real-time access, RESTful
+              API, live notifications, advanced security with role-based access
+              control and encryption, and a scalable device hierarchy. ARA
+              delivers a unified user experience, acting as a remote portal to
+              local device interfaces.
             </p>
             <p className="mono underline font-bold">
-              Utilizing technologies such as ReactJS, TypeScript, NodeJS, MongoDB, MariaDB, Python, and Flask, ara is a powerful tool for efficient device management.
+              Utilizing technologies such as ReactJS, TypeScript, NodeJS,
+              MongoDB, MariaDB, Python, and Flask, ara is a powerful tool for
+              efficient device management.
             </p>
-            <p className="mono">- Real-time device access for streamlined monitoring and troubleshooting</p>
-            <p className="mono">- Comprehensive RESTful API for scalable device management and integration</p>
-            <p className="mono">- Live notifications enhancing operational awareness and reducing response time</p>
-            <p className="mono">- Advanced security features including role-based user access control and end-to-end encryption</p>
-            <p className="mono">- Customizable device collection hierarchy for optimized workflows and targeted management</p>
+            <p className="mono">
+              - Real-time device access for streamlined monitoring and
+              troubleshooting
+            </p>
+            <p className="mono">
+              - Comprehensive RESTful API for scalable device management and
+              integration
+            </p>
+            <p className="mono">
+              - Live notifications enhancing operational awareness and reducing
+              response time
+            </p>
+            <p className="mono">
+              - Advanced security features including role-based user access
+              control and end-to-end encryption
+            </p>
+            <p className="mono">
+              - Customizable device collection hierarchy for optimized workflows
+              and targeted management
+            </p>
           </div>
           <figure className="flex-1 post-image">
             <img src="dataremote.png" className="post-image" alt="dataremote" />
@@ -156,12 +196,23 @@ export default function Home() {
             </figure>
             <h2 className="display text-lg sm:text-2xl py-3">JobCore</h2>
             <p className="mono">
-              JobCore Talent is a platform focused on the hospitality industry that connects caterers, full service restaurants, nightclubs, bars and janitorial services companies to qualified
-              part-time workers.
+              JobCore Talent is a platform focused on the hospitality industry
+              that connects caterers, full service restaurants, nightclubs, bars
+              and janitorial services companies to qualified part-time workers.
             </p>
-            <p className="mono">- JobCore Talent provides an easy to use end-to-end experience for job seekers in the hospitality industry straight from your mobile device.</p>
-            <p className="mono">- Setup you job and role preferences, publish shifts, and access a talent pool of thousands of rated job seekers.</p>
-            <p className="mono">- Built using React, React Native, Flux, Python, PostgreSQL, Heroku, Vercel, Gatsby, Django REST Framework</p>
+            <p className="mono">
+              - JobCore Talent provides an easy to use end-to-end experience for
+              job seekers in the hospitality industry straight from your mobile
+              device.
+            </p>
+            <p className="mono">
+              - Setup you job and role preferences, publish shifts, and access a
+              talent pool of thousands of rated job seekers.
+            </p>
+            <p className="mono">
+              - Built using React, React Native, Flux, Python, PostgreSQL,
+              Heroku, Vercel, Gatsby, Django REST Framework
+            </p>
           </div>
           <div className="border-b sm:border-b-0 sm:border-r border-black pr-4">
             <figure className="flex-1 post-image">
@@ -169,9 +220,13 @@ export default function Home() {
             </figure>
             <h2 className="display text-lg sm:text-2xl py-3">ImRecruitable</h2>
             <p className="mono">
-              ImRecruitable is known as the “go-to” college athletic recruiting platform, with a database of over 35,000 college coaches using ImRecruitable to find athletes in their respective
-              sports. Since 2009, ImRecruitable has offered connections between college coaches and student-athletes around the world, recruiting advice, and an extensive set of tools and services
-              that help on their mission to play their sport in college.
+              ImRecruitable is known as the “go-to” college athletic recruiting
+              platform, with a database of over 35,000 college coaches using
+              ImRecruitable to find athletes in their respective sports. Since
+              2009, ImRecruitable has offered connections between college
+              coaches and student-athletes around the world, recruiting advice,
+              and an extensive set of tools and services that help on their
+              mission to play their sport in college.
             </p>
             <p className="mono  mt-4">- Receive expert guidance</p>
             <p className="mono">- Discover your best fit schools</p>
@@ -182,9 +237,17 @@ export default function Home() {
             <figure className="flex-1 post-image">
               <img src="thepokersocietylogo.jpg" alt="pokersociety" />
             </figure>
-            <h2 className="display text-lg sm:text-2xl py-3">The Poker Society</h2>
-            <p className="mono">An app where you can see tournaments available in casino located in Miami, Ford Lauderdale, and Las Vegas.</p>
-            <p className="mono mt-4">- Check tournament near Miami area and see if you are able to participate.</p>
+            <h2 className="display text-lg sm:text-2xl py-3">
+              The Poker Society
+            </h2>
+            <p className="mono">
+              An app where you can see tournaments available in casino located
+              in Miami, Ford Lauderdale, and Las Vegas.
+            </p>
+            <p className="mono mt-4">
+              - Check tournament near Miami area and see if you are able to
+              participate.
+            </p>
             <p className="mono">- Join a network of poker professional.</p>
             <p className="mono">- Built using React with Flux</p>
           </div>
@@ -220,18 +283,45 @@ export default function Home() {
         <div>
           <ul className="space-y-1">
             {[
-              { name: "Link Sprout", github: "https://github.com/ixaxtav/link-sprout", link: "https://link-sprout.web.app", stack: "(SvelteKit, Tailwindcss, Firebase, Typescript)" },
-              { name: "Task Management App", github: "https://github.com/ixaxtav/task-management-app", link: "https://ixaxtav.github.io/simple-task-management-app/ ", stack: "(HTML, CSS)" },
-              { name: "BMI Calculator", github: "https://github.com/ixaxtav/bmi-calculator", link: "https://ixaxtav.github.io/bmi-calculator/ ", stack: "(HTML, CSS)" },
-              { name: "Todo List", github: "https://github.com/ixaxtav/todo-list", link: "https://ixaxtav.github.io/todo-list/", stack: "(React, Typescript)" },
-              { name: "Tic Tac Toe", github: "https://github.com/ixaxtav/tic-tac-toe", link: "https://ixaxtav.github.io/tic-tac-toe", stack: "(HTML, CSS)" },
+              {
+                name: "Link Sprout",
+                github: "https://github.com/ixaxtav/link-sprout",
+                link: "https://link-sprout.web.app",
+                stack: "(SvelteKit, Tailwindcss, Firebase, Typescript)",
+              },
+              {
+                name: "Task Management App",
+                github: "https://github.com/ixaxtav/task-management-app",
+                link: "https://ixaxtav.github.io/simple-task-management-app/ ",
+                stack: "(HTML, CSS)",
+              },
+              {
+                name: "BMI Calculator",
+                github: "https://github.com/ixaxtav/bmi-calculator",
+                link: "https://ixaxtav.github.io/bmi-calculator/ ",
+                stack: "(HTML, CSS)",
+              },
+              {
+                name: "Todo List",
+                github: "https://github.com/ixaxtav/todo-list",
+                link: "https://ixaxtav.github.io/todo-list/",
+                stack: "(React, Typescript)",
+              },
+              {
+                name: "Tic Tac Toe",
+                github: "https://github.com/ixaxtav/tic-tac-toe",
+                link: "https://ixaxtav.github.io/tic-tac-toe",
+                stack: "(HTML, CSS)",
+              },
             ].map((project, index) => (
               <MiscProject key={index} {...project} />
             ))}
           </ul>
         </div>
         <hr className="thick" />
-        <p className="mono pb-4">Copyright @ {new Date().getFullYear()} Ixax Tavarez</p>
+        <p className="mono pb-4">
+          Copyright @ {new Date().getFullYear()} Ixax Tavarez
+        </p>
       </main>
       <div className="tv-static" />
     </div>
