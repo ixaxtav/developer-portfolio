@@ -1,7 +1,6 @@
 import { MiscProject } from "./components/MiscProject";
 
 export default function Home() {
-  console.log("1152025");
   return (
     <div>
       <main className="mx-auto max-w-7xl px-4 pt-6 lg:px-8">
@@ -83,10 +82,6 @@ export default function Home() {
         </div>
         <div className="grid sm:grid-cols-4 gap-4">
           <div className="sm:border-r border-black">
-            <h2 className="display text-lg sm:text-2xl">Best Miami Weddings</h2>
-            <p className="mono">Front End Developer (Jan 2017)</p>
-          </div>
-          <div className="sm:border-r border-black">
             <h2 className="display text-lg sm:text-2xl">ImRecruitable</h2>
             <p className="mono">Full Stack Developer (Jun 2018)</p>
           </div>
@@ -94,14 +89,20 @@ export default function Home() {
             <h2 className="display text-lg sm:text-2xl">JobCore Talent</h2>
             <p className="mono">Full Stack Developer (Feb 2020)</p>
           </div>
-          <div className="border-black">
+          <div className="sm:border-r border-black">
             <div className="flex items-center gap-1">
               <h2 className="display text-lg sm:text-2xl">DataRemote</h2>
+            </div>
+            <p className="mono">Sr. Full Stack Developer (Jan 2022)</p>
+          </div>
+          <div className="border-black">
+            <div className="flex items-center gap-1">
+              <h2 className="display text-lg sm:text-2xl">AllClear.ai</h2>
               <span className="badge bg-black text-white text-xs rounded p-1">
                 Current
               </span>
             </div>
-            <p className="mono">Sr. Full Stack Developer (Jan 2022)</p>
+            <p className="mono">Sr. Full Stack Developer (Apr 2024)</p>
           </div>
         </div>
         <a
@@ -147,8 +148,47 @@ export default function Home() {
           </svg>
           <h3 className="mono pt-1">Projects</h3>
         </div>
-        <div className="flex flex-col sm:flex-row items-center gap-4 border-b border-black pb-6">
-          <div className="w-96">
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4 border-b border-black">
+          <div className="sm:col-span-2 border-b sm:border-r sm:border-b-0 border-black pr-4">
+            <figure className="flex-1 post-image">
+              <img src="ida.jpeg" className="post-image" alt="dataremote" />
+            </figure>
+            <h2 className="display text-lg sm:text-2xl py-3">
+              Instant Debt Advisor
+            </h2>
+            <p className="mono">
+              Debt relief should be simple, but often isn't. That's why we
+              created Instant Debt Advisor℠ at AllClear.ai—a digital-first,
+              intuitive experience that connects businesses with high-intent
+              consumers for effective debt relief.
+            </p>
+            <p className="mono underline font-bold">
+              Utilizing technologies such as ReactJS, TypeScript, NodeJS,
+              Golang, Firebase
+            </p>
+            <p className="mono">
+              - Personalized Recommendations: Quickly analyzes a consumer's debt
+              and suggests fitting relief programs, matching users with
+              reputable providers.
+            </p>
+            <p className="mono">
+              - Automated Debt Analysis: Reviews credit data to identify
+              eligible debts, allowing users to adjust as needed.
+            </p>
+            <p className="mono">
+              - Financial Tools: Intelligent budgeting with actionable
+              recommendations to support the debt relief journey.
+            </p>
+          </div>
+          <div className="border-b sm:border-b-0 sm:border-r border-black pr-4">
+            <figure className="flex-1 post-image">
+              <img
+                src="dataremote.png"
+                className="post-image"
+                alt="dataremote"
+              />
+            </figure>
             <h2 className="display text-lg sm:text-2xl py-3">ARA</h2>
             <p className="mono">
               DataRemote's ARA Device Management Platform offers a secure and
@@ -176,18 +216,7 @@ export default function Home() {
               - Live notifications enhancing operational awareness and reducing
               response time
             </p>
-            <p className="mono">
-              - Advanced security features including role-based user access
-              control and end-to-end encryption
-            </p>
-            <p className="mono">
-              - Customizable device collection hierarchy for optimized workflows
-              and targeted management
-            </p>
           </div>
-          <figure className="flex-1 post-image">
-            <img src="dataremote.png" className="post-image" alt="dataremote" />
-          </figure>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 py-4 border-b border-black">
           <div className="sm:col-span-2 border-b sm:border-r sm:border-b-0 border-black pr-4">
