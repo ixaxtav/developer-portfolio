@@ -1,9 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-8PNKLTLXRR";
 
 export const metadata = {
   title: "Ixax Tavarez - Software Engineer",
@@ -13,23 +15,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PNKLTLXRR"></script>
-      <Script
-        id="gtm"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-8PNKLTLXRR');`
-        }}
-      ></Script>
-      </head>
-      
-      <body className={inter.className}>{children}<Analytics/></body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtm" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }

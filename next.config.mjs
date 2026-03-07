@@ -10,8 +10,8 @@ const nextConfig = {
             value: `
                   default-src 'self';
                   img-src 'self' https:;
-                  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
-                  connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+                  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://va.vercel-scripts.com;
+                  connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://vitals.vercel-insights.com;
                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                   font-src 'self' https://fonts.gstatic.com;
                 `

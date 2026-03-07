@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MiscProject } from "./components/MiscProject";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <div>
       <main className="mx-auto max-w-7xl px-4 pt-6 lg:px-8">
         <header className="flex flex-col sm:flex-row items-center justify-between mb-1">
-          <div className="flex flex-col sm:flex-row  items-center w-full">
+          <div className="flex flex-col sm:flex-row items-center w-full">
             <p className="mono whitespace-nowrap">👨🏽‍💻 Coding Cool Things</p>
             <hr className="w-full mx-2 border-black" />
           </div>
@@ -14,11 +15,11 @@ export default function Home() {
           </h1>
           <div className="flex items-center space-x-2 w-full justify-center sm:justify-normal">
             <hr className="w-full hidden sm:block mx-2 border-black" />
-            <a href="https://www.linkedin.com/in/ixaxtavarez" className="link">
+            <a href="https://www.linkedin.com/in/ixaxtavarez" target="_blank" rel="noopener noreferrer" className="link">
               LinkedIn
             </a>
             <hr className="w-4 mx-2 border-black" />
-            <a href="https://github.com/ixaxtav" className="link">
+            <a href="https://github.com/ixaxtav" target="_blank" rel="noopener noreferrer" className="link">
               Github
             </a>
             <hr className="w-4 mx-2 border-black" />
@@ -43,15 +44,20 @@ export default function Home() {
           </div>
         </section>
         <section className="flex  flex-col sm:flex-row items-center gap-4 sm:gap-10 mt-4">
-          <img
+          <Image
             className="inline-block h-48 w-48 sm:h-72 sm:w-72 rounded-full border-4 border-black post-image"
-            src="avatar.png"
-            alt="my-headshot"
+            src="/avatar.png"
+            alt="Ixax Tavarez headshot"
+            width={288}
+            height={288}
+            priority
           />
           <p className="display text-xl sm:text-3xl">
             Hello World! I'm{" "}
             <a
               href="https://www.linkedin.com/in/ixaxtavarez"
+              target="_blank"
+              rel="noopener noreferrer"
               className="highlight font-bold"
             >
               Ixax
@@ -107,6 +113,8 @@ export default function Home() {
         </div>
         <a
           href="https://www.linkedin.com/in/ixaxtavarez"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center mt-4 gap-2"
         >
           <svg
@@ -152,7 +160,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4 border-b border-black">
           <div className="sm:col-span-2 border-b sm:border-r sm:border-b-0 border-black pr-4">
             <figure className="flex-1 post-image">
-              <img src="ida.jpeg" className="post-image" alt="dataremote" />
+              <Image src="/ida.jpeg" className="post-image" alt="Instant Debt Advisor" width={800} height={500} />
             </figure>
             <h2 className="display text-lg sm:text-2xl py-3">
               Instant Debt Advisor
@@ -183,10 +191,12 @@ export default function Home() {
           </div>
           <div className="border-b sm:border-b-0 sm:border-r border-black pr-4">
             <figure className="flex-1 post-image">
-              <img
-                src="dataremote.png"
+              <Image
+                src="/dataremote.png"
                 className="post-image"
-                alt="dataremote"
+                alt="ARA Device Management Platform"
+                width={800}
+                height={500}
               />
             </figure>
             <h2 className="display text-lg sm:text-2xl py-3">ARA</h2>
@@ -221,7 +231,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 py-4 border-b border-black">
           <div className="sm:col-span-2 border-b sm:border-r sm:border-b-0 border-black pr-4">
             <figure className="flex-1 post-image">
-              <img src="jobcore.png" alt="jobcore" />
+              <Image src="/jobcore.png" alt="JobCore Talent" width={800} height={500} />
             </figure>
             <h2 className="display text-lg sm:text-2xl py-3">JobCore</h2>
             <p className="mono">
@@ -245,7 +255,7 @@ export default function Home() {
           </div>
           <div className="border-b sm:border-b-0 sm:border-r border-black pr-4">
             <figure className="flex-1 post-image">
-              <img src="imrecruitable.png" alt="imrecruitable" />
+              <Image src="/imrecruitable.png" alt="ImRecruitable" width={800} height={500} />
             </figure>
             <h2 className="display text-lg sm:text-2xl py-3">ImRecruitable</h2>
             <p className="mono">
@@ -264,7 +274,7 @@ export default function Home() {
           </div>
           <div className="sm:border-r border-black pr-4">
             <figure className="flex-1 post-image">
-              <img src="thepokersocietylogo.jpg" alt="pokersociety" />
+              <Image src="/thepokersocietylogo.jpg" alt="The Poker Society" width={800} height={500} />
             </figure>
             <h2 className="display text-lg sm:text-2xl py-3">
               The Poker Society
@@ -321,13 +331,13 @@ export default function Home() {
               {
                 name: "Task Management App",
                 github: "https://github.com/ixaxtav/task-management-app",
-                link: "https://ixaxtav.github.io/simple-task-management-app/ ",
+                link: "https://ixaxtav.github.io/simple-task-management-app/",
                 stack: "(HTML, CSS)",
               },
               {
                 name: "BMI Calculator",
                 github: "https://github.com/ixaxtav/bmi-calculator",
-                link: "https://ixaxtav.github.io/bmi-calculator/ ",
+                link: "https://ixaxtav.github.io/bmi-calculator/",
                 stack: "(HTML, CSS)",
               },
               {
@@ -342,8 +352,8 @@ export default function Home() {
                 link: "https://ixaxtav.github.io/tic-tac-toe",
                 stack: "(HTML, CSS)",
               },
-            ].map((project, index) => (
-              <MiscProject key={index} {...project} />
+            ].map((project) => (
+              <MiscProject key={project.name} {...project} />
             ))}
           </ul>
         </div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 export const MiscProject = ({ name, github, link, stack }) => {
   return (
     <li className="flex flex-wrap items-center">
