@@ -4,7 +4,10 @@ import { MiscProject } from "./components/MiscProject";
 export default function Home() {
   return (
     <div>
-      <main className="mx-auto max-w-7xl px-4 pt-6 lg:px-8">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-black">
+        Skip to content
+      </a>
+      <main id="main-content" className="mx-auto max-w-7xl px-4 pt-6 lg:px-8">
         <header className="flex flex-col sm:flex-row items-center justify-between mb-1">
           <div className="flex flex-col sm:flex-row items-center w-full">
             <p className="mono whitespace-nowrap">👨🏽‍💻 Coding Cool Things</p>
@@ -43,13 +46,14 @@ export default function Home() {
             <hr className="w-full border-black border-2" />
           </div>
         </section>
-        <section className="flex  flex-col sm:flex-row items-center gap-4 sm:gap-10 mt-4">
+        <section className="flex flex-col sm:flex-row items-center gap-4 sm:gap-10 mt-4">
           <Image
             className="inline-block h-48 w-48 sm:h-72 sm:w-72 rounded-full border-4 border-black post-image"
             src="/avatar.png"
             alt="Ixax Tavarez headshot"
             width={288}
             height={288}
+            sizes="(max-width: 640px) 192px, 288px"
             priority
           />
           <p className="display text-xl sm:text-3xl">
@@ -70,6 +74,7 @@ export default function Home() {
         <hr className="double-separator" />
         <div className="flex items-center gap-2 mb-4">
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -84,26 +89,26 @@ export default function Home() {
             <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
           </svg>
-          <h3 className="mono pt-1">Work Experience</h3>
+          <h2 className="mono pt-1">Work Experience</h2>
         </div>
         <div className="grid sm:grid-cols-4 gap-4">
           <div className="sm:border-r border-black">
-            <h2 className="display text-lg sm:text-2xl">ImRecruitable</h2>
+            <h3 className="display text-lg sm:text-2xl">ImRecruitable</h3>
             <p className="mono">Full Stack Developer (Jun 2018)</p>
           </div>
           <div className="sm:border-r border-black">
-            <h2 className="display text-lg sm:text-2xl">JobCore Talent</h2>
+            <h3 className="display text-lg sm:text-2xl">JobCore Talent</h3>
             <p className="mono">Full Stack Developer (Feb 2020)</p>
           </div>
           <div className="sm:border-r border-black">
             <div className="flex items-center gap-1">
-              <h2 className="display text-lg sm:text-2xl">DataRemote</h2>
+              <h3 className="display text-lg sm:text-2xl">DataRemote</h3>
             </div>
             <p className="mono">Sr. Full Stack Developer (Jan 2022)</p>
           </div>
           <div className="border-black">
             <div className="flex items-center gap-1">
-              <h2 className="display text-lg sm:text-2xl">AllClear.ai</h2>
+              <h3 className="display text-lg sm:text-2xl">AllClear.ai</h3>
               <span className="badge bg-black text-white text-xs rounded p-1">
                 Current
               </span>
@@ -118,6 +123,7 @@ export default function Home() {
           className="flex items-center mt-4 gap-2"
         >
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="14"
             height="14"
@@ -138,6 +144,7 @@ export default function Home() {
         <hr className="double-separator" />
         <div className="flex items-center gap-2 mb-4">
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -154,17 +161,17 @@ export default function Home() {
             <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
             <line x1="12" y1="22.08" x2="12" y2="12" />
           </svg>
-          <h3 className="mono pt-1">Projects</h3>
+          <h2 className="mono pt-1">Projects</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4 border-b border-black">
           <div className="sm:col-span-2 border-b sm:border-r sm:border-b-0 border-black pr-4">
             <figure className="flex-1 post-image">
-              <Image src="/ida.jpeg" className="post-image" alt="Instant Debt Advisor" width={800} height={500} />
+              <Image src="/ida.jpeg" className="post-image" alt="Instant Debt Advisor" width={800} height={500} sizes="(max-width: 640px) 100vw, 66vw" />
             </figure>
-            <h2 className="display text-lg sm:text-2xl py-3">
+            <h3 className="display text-lg sm:text-2xl py-3">
               Instant Debt Advisor
-            </h2>
+            </h3>
             <p className="mono">
               Debt relief should be simple, but often isn't. That's why we
               created Instant Debt Advisor℠ at AllClear.ai—a digital-first,
@@ -197,9 +204,10 @@ export default function Home() {
                 alt="ARA Device Management Platform"
                 width={800}
                 height={500}
+                sizes="(max-width: 640px) 100vw, 33vw"
               />
             </figure>
-            <h2 className="display text-lg sm:text-2xl py-3">ARA</h2>
+            <h3 className="display text-lg sm:text-2xl py-3">ARA</h3>
             <p className="mono">
               DataRemote's ARA Device Management Platform offers a secure and
               efficient solution for device provisioning, management, and
@@ -231,9 +239,9 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 py-4 border-b border-black">
           <div className="sm:col-span-2 border-b sm:border-r sm:border-b-0 border-black pr-4">
             <figure className="flex-1 post-image">
-              <Image src="/jobcore.png" alt="JobCore Talent" width={800} height={500} />
+              <Image src="/jobcore.png" alt="JobCore Talent" width={800} height={500} sizes="(max-width: 640px) 100vw, 50vw" />
             </figure>
-            <h2 className="display text-lg sm:text-2xl py-3">JobCore</h2>
+            <h3 className="display text-lg sm:text-2xl py-3">JobCore</h3>
             <p className="mono">
               JobCore Talent is a platform focused on the hospitality industry
               that connects caterers, full service restaurants, nightclubs, bars
@@ -255,9 +263,9 @@ export default function Home() {
           </div>
           <div className="border-b sm:border-b-0 sm:border-r border-black pr-4">
             <figure className="flex-1 post-image">
-              <Image src="/imrecruitable.png" alt="ImRecruitable" width={800} height={500} />
+              <Image src="/imrecruitable.png" alt="ImRecruitable" width={800} height={500} sizes="(max-width: 640px) 100vw, 25vw" />
             </figure>
-            <h2 className="display text-lg sm:text-2xl py-3">ImRecruitable</h2>
+            <h3 className="display text-lg sm:text-2xl py-3">ImRecruitable</h3>
             <p className="mono">
               ImRecruitable is known as the “go-to” college athletic recruiting
               platform, with a database of over 35,000 college coaches using
@@ -274,14 +282,14 @@ export default function Home() {
           </div>
           <div className="sm:border-r border-black pr-4">
             <figure className="flex-1 post-image">
-              <Image src="/thepokersocietylogo.jpg" alt="The Poker Society" width={800} height={500} />
+              <Image src="/thepokersocietylogo.jpg" alt="The Poker Society" width={800} height={500} sizes="(max-width: 640px) 100vw, 25vw" />
             </figure>
-            <h2 className="display text-lg sm:text-2xl py-3">
+            <h3 className="display text-lg sm:text-2xl py-3">
               The Poker Society
-            </h2>
+            </h3>
             <p className="mono">
               An app where you can see tournaments available in casino located
-              in Miami, Ford Lauderdale, and Las Vegas.
+              in Miami, Fort Lauderdale, and Las Vegas.
             </p>
             <p className="mono mt-4">
               - Check tournament near Miami area and see if you are able to
@@ -302,6 +310,7 @@ export default function Home() {
         <hr className="double-separator" />
         <div className="flex items-center gap-2 mb-4">
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -317,7 +326,7 @@ export default function Home() {
             <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
             <line x1="12" y1="22.08" x2="12" y2="12" />
           </svg>
-          <h3 className="mono pt-1">Misc. Projects</h3>
+          <h2 className="mono pt-1">Misc. Projects</h2>
         </div>
         <div>
           <ul className="space-y-1">
