@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Never commit local secrets, scratch exports, or runtime artifacts.
+.env
+.env.*
+!.env.example
+__pycache__/
+output/
+tmp/

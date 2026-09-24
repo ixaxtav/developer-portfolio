@@ -1,0 +1,99 @@
+{
+  "name": "Ixax Tavarez",
+  "title": "Lead Developer",
+  "location": "South Florida",
+  "email": "ixaxtav@gmail.com",
+  "site": "https://www.ixaxtavarez.com",
+  "github": "https://github.com/ixaxtav",
+  "linkedin": "https://www.linkedin.com/in/ixaxtavarez",
+  "summary": "Lead Developer with 8+ years building full-stack products with React, TypeScript, Go, Python, and Node.js. Experience with LLM integration, workflow automation, and backend optimization.",
+  "jobs": [
+    {
+      "company": "AllClear.ai",
+      "title": "Lead Developer",
+      "period": "Apr 2024 - Present",
+      "progression": "Lead Developer · Aug 2026 - Present; Senior Full Stack Engineer · Apr 2024 - Aug 2026",
+      "technologies": "React, TypeScript, Go, NestJS, Google Cloud",
+      "summary": "Building the workflows behind customer onboarding, lead qualification, and partner operations.",
+      "bullets": [
+        "Led onboarding and qualification improvements across the embedded partner app, customer portal, and backend services, helping lower cost per lead and increase customer contact rates.",
+        "Designed and implemented configurable lead distribution, supporting partner-specific routing and weighted allocation across debt-relief providers.",
+        "Reworked slow qualification flows across Cloud Functions and NestJS APIs, batching rule execution, reusing authentication tokens, and consolidating Firestore writes to reduce repeated backend work.",
+        "Delivered CRM document generation and e-signature workflows with live status updates; integrated Cloud KMS encryption into applicant-data storage.",
+        "Integrated OpenAI models into a NestJS classification service, with JSON response validation, error handling, request tracing, and automated API tests.",
+        "Coordinated Claude and Codex agents for coding and review, validating changes before merging."
+      ]
+    },
+    {
+      "company": "DataRemote, Inc.",
+      "title": "Software Engineer",
+      "period": "Jan 2022 - Apr 2024",
+      "technologies": "React, TypeScript, Python, Flask, SQLAlchemy, Node.js, Docker",
+      "summary": "Connecting device-management interfaces with backend services and live device events.",
+      "bullets": [
+        "Developed React/TypeScript device-management interfaces, working with firmware engineers on the local web UI shipped with telecom devices.",
+        "Built and maintained Python/Flask APIs with SQLAlchemy to support device-management workflows; packaged services with Docker.",
+        "Implemented live device-status updates using Node.js and WebSockets, connecting backend events to the user interface."
+      ]
+    },
+    {
+      "company": "JobCore Talent",
+      "title": "Full-Stack Developer",
+      "period": "Feb 2020 - Dec 2021",
+      "technologies": "React, React Native, Python, Django, PostgreSQL",
+      "summary": "Helping employers manage shifts and payroll, and workers manage the work ahead.",
+      "bullets": [
+        "Built employer-facing React features for recurring shifts, employee invitations, payroll reports, and subscription payments.",
+        "Extended Python/Django APIs and PostgreSQL queries for shift assignments, time tracking, and payroll; corrected pay calculations and report data.",
+        "Contributed to React Native mobile features for workers to manage job invitations, upcoming shifts, and payment history."
+      ]
+    },
+    {
+      "company": "ImRecruitable",
+      "title": "Founding Developer",
+      "period": "Jan 2018 - Jan 2020",
+      "technologies": "React, Node.js, Express, MongoDB, Stripe",
+      "summary": "Built and launched the initial college recruiting application from the ground up.",
+      "bullets": [
+        "Built and launched the initial college recruiting application from scratch with React, Node.js, Express, and MongoDB, delivering athlete profiles, college search, and coach recruiting tools.",
+        "Implemented athlete and coach authentication, Stripe subscriptions, profile media uploads, and administrative approval workflows."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "label": "Languages",
+      "items": ["TypeScript", "JavaScript", "Python", "Go", "SQL"]
+    },
+    {
+      "label": "Frontend",
+      "items": ["React", "React Native", "Next.js", "Redux"]
+    },
+    {
+      "label": "Backend & data",
+      "items": [
+        "Node.js",
+        "NestJS",
+        "Express",
+        "Django",
+        "Flask",
+        "PostgreSQL",
+        "MongoDB",
+        "Firestore"
+      ]
+    },
+    {
+      "label": "Cloud & testing",
+      "items": [
+        "Google Cloud",
+        "Firebase",
+        "Docker",
+        "GitHub Actions",
+        "Jest",
+        "Pytest",
+        "Playwright"
+      ]
+    }
+  ],
+  "education": "Bachelor of Science, University of Miami · May 2017"
+}

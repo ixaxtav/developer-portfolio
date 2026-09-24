@@ -1,130 +1,68 @@
-# Developer Portfolio
+# Ixax Tavarez — developer portfolio
 
-Welcome to my developer portfolio! This repository showcases my projects, skills, and experiences as a full-stack developer.
+[www.ixaxtavarez.com](https://www.ixaxtavarez.com)
 
-## About Me
+A personal portfolio for my work as a lead full-stack developer. Built with Next.js 16, React 19, TypeScript, and plain CSS. The visual direction is an editorial notebook: warm paper, serif headlines, purposeful diagrams, and readable project narratives.
 
-Hello World! I'm Ixax, your go-to guy for both front-end and back-end web development. Here in my portfolio, you'll see how I turn complex ideas into cool, user-friendly websites. Feel free to explore my work!
+## Develop
 
-## Portfolio Website
+Use Node 22 (`nvm use`) and npm.
 
-Explore my work and learn more about me on my portfolio website:
+```sh
+npm ci
+npm run dev
+```
 
-[ixaxtavarez.com](https://ixaxtavarez.com)
+No API keys, database, or environment variables are required.
 
-## Work Experience
+## Verify
 
-- **AllClear.ai**  
-  *Senior Full Stack Developer (Apr 2024 – Present)*
+```sh
+npm run check
+npm audit --audit-level=moderate
+```
 
-- **DataRemote**  
-  *Senior Full Stack Developer (Jan 2022 – Mar 2024)*
+`check` runs ESLint, TypeScript, the production build, and integration tests. The tests start and stop an isolated loopback production server on a free port. They verify pages and internal links, current career content, nonce-based CSP, headers, removed assets, PDF delivery/indexing, robots, sitemap, and social previews. They do not call third-party services or send messages. Visual/mobile and assistive-technology review remain manual checks.
 
-- **JobCore Talent**  
-  *Full Stack Developer (Feb 2020 – Dec 2021)*
+ESLint 9 is retained for the current Next.js React/accessibility plugin peer compatibility; upgrade it when those plugins support ESLint 10. This is development tooling, not a deployed runtime dependency.
 
-- **ImRecruitable**  
-  *Full Stack Developer (Jun 2018 – Jan 2020)*
+CI runs on pull requests and pushes to main. Dependabot checks npm weekly and GitHub Actions monthly. Updates still need review; there is no automatic merge.
 
-## Projects
+## Content
 
-### 1. Instant Debt Advisor
+- `content/profile.json`: public professional facts, job dates, skills, and résumé copy. Keep it free of private phone numbers, precise addresses, and credentials.
+- `lib/projects.ts`: case-study narratives and conceptual workflows. Describe actual contributions; don't invent performance metrics or publish internal business rules.
+- `app/work/[slug]/page.tsx`: case-study pages.
+- `app/globals.css`: responsive design, visible focus, reduced-motion, and print styles.
+- `public/avatar.png`: the only photograph; no operational/customer screenshots are served.
 
-*AllClear.ai*
+The case studies describe professional work whose source is private. Original workflow diagrams use no customer records, device identifiers, payroll details, or location data.
 
-Debt relief should be simple, but often isn't. That's why we created Instant Debt Advisor℠ at AllClear.ai—a digital-first, intuitive experience that connects businesses with high-intent consumers for effective debt relief.
+## Public résumé
 
-**Technologies:** ReactJS, TypeScript, NodeJS, Golang, Firebase
+The public PDF omits the personal phone number and uses a broad location. It shares its copy with the site's profile data. To regenerate it, use Python 3 with ReportLab installed:
 
-- **Personalized Recommendations:** Quickly analyzes a consumer's debt and suggests fitting relief programs, matching users with reputable providers.
-- **Automated Debt Analysis:** Reviews credit data to identify eligible debts, allowing users to adjust as needed.
-- **Financial Tools:** Intelligent budgeting with actionable recommendations to support the debt relief journey.
+```sh
+python3 -m pip install reportlab
+python3 scripts/build-resume.py
+```
 
-### 2. ARA
+Inspect the generated PDF for layout and verify its text before committing. The committed PDF is served directly; deployment does not require Python. The PDF's `X-Robots-Tag: noindex, noarchive` expresses indexing preference, not confidentiality. Keep private application-specific résumé details outside this public repository.
 
-*DataRemote*
+## Security and privacy
 
-DataRemote's ARA Device Management Platform offers a secure and efficient solution for device provisioning, management, and troubleshooting. Key features include real-time access, RESTful API, live notifications, advanced security with role-based access control and encryption, and a scalable device hierarchy. ARA delivers a unified user experience, acting as a remote portal to local device interfaces.
+- Current supported Next.js/React versions; committed npm lockfile.
+- Per-request nonce-based script CSP through `proxy.ts`; HTML is dynamically rendered and not shared-cacheable so the nonce stays unique. This trades static HTML caching for stricter script execution. Static assets still cache normally.
+- Inline styles remain permitted for framework-generated attributes; inline scripts require a nonce. No third-party script origins are allowed.
+- Security headers include HSTS, nosniff, framing protection, a restricted permissions policy, and referrer policy.
+- No account system, form handler, analytics SDK, third-party font request, or image-optimization endpoint is used.
+- Vercel still processes infrastructure/request information; see the site's privacy page.
+- Plain `.env` and `.env.*` files are ignored. Public identifiers and public email are intentionally visible.
 
-**Technologies:** ReactJS, TypeScript, NodeJS, MongoDB, MariaDB, Python, Flask
+Previously published screenshots and an older résumé were removed/replaced in September 2026. Ordinary commits do not erase historical Git objects, old deployment URLs, caches, forks, or downloaded copies. Assess those separately if any old content is confirmed sensitive. This repository does not perform destructive history rewrites or delete old deployments automatically.
 
-- **Real-time device access:** Streamlined monitoring and troubleshooting.
-- **Comprehensive RESTful API:** Scalable device management and integration.
-- **Live notifications:** Enhancing operational awareness and reducing response time.
+## Deployment
 
-### 3. JobCore
+Pushes to `main` trigger the connected Vercel project. `engines.node` selects Node 22. Vercel runs `npm run build`. The canonical host is `https://www.ixaxtavarez.com`; configure domain redirects in Vercel.
 
-*JobCore Talent*
-
-JobCore Talent is a platform focused on the hospitality industry that connects caterers, full-service restaurants, nightclubs, bars, and janitorial services companies to qualified part-time workers.
-
-**Technologies:** React, React Native, Flux, Python, PostgreSQL, Heroku, Vercel, Gatsby, Django REST Framework
-
-- **User-friendly experience:** For job seekers in the hospitality industry straight from your mobile device.
-- **Job and role preferences:** Publish shifts and access a talent pool of thousands of rated job seekers.
-
-### 4. ImRecruitable
-
-*ImRecruitable*
-
-ImRecruitable is known as the “go-to” college athletic recruiting platform, with a database of over 35,000 college coaches using ImRecruitable to find athletes in their respective sports. Since 2009, ImRecruitable has offered connections between college coaches and student-athletes around the world, recruiting advice, and an extensive set of tools and services that help on their mission to play their sport in college.
-
-**Technologies:** MERN Stack
-
-- **Expert guidance:** Receive personalized recruiting advice.
-- **Discover best-fit schools:** Find colleges that match your athletic and academic profile.
-- **Get seen by college coaches:** Increase visibility among a vast network of coaches.
-
-### 5. The Poker Society
-
-An app where you can see tournaments available in casinos located in Miami, Fort Lauderdale, and Las Vegas.
-
-**Technologies:** React with Flux
-
-- **Tournament listings:** Check tournaments near the Miami area and see if you are able to participate.
-- **Network:** Join a network of poker professionals.
-
-## Miscellaneous Projects
-
-- **Link Sprout:**  
-  *Technologies:* SvelteKit, Tailwindcss, Firebase, TypeScript  
-  [Live Demo](https://link-sprout.web.app)
-
-- **Task Management App:**  
-  *Technologies:* HTML, CSS  
-  [Live Demo](https://ixaxtav.github.io/task-management-app)
-
-- **BMI Calculator:**  
-  *Technologies:* HTML, CSS  
-  [Live Demo](https://ixaxtav.github.io/bmi-calculator)
-
-- **Todo List:**  
-  *Technologies:* React, TypeScript  
-  [Live Demo](https://ixaxtav.github.io/todo-list)
-
-- **Tic Tac Toe:**  
-  *Technologies:* HTML, CSS  
-  [Live Demo](https://ixaxtav.github.io/tic-tac-toe)
-
-## Skills
-
-- **Languages:** JavaScript, TypeScript, Python, SQL
-- **Front-End:** React.js, React Native, Flux, Svelte, HTML, CSS
-- **Back-End:** Node.js, Golang, Python, Flask
-- **Databases:** MongoDB, MariaDB, PostgreSQL, Firebase
-- **Tools & Platforms:** WordPress, Git, Tailwind CSS, Heroku, Vercel, Gatsby, Django REST Framework
-
-## Contact
-
-Feel free to reach out to me via:
-
-- **Portfolio Website:** [ixaxtavarez.com](https://ixaxtavarez.com)
-- **LinkedIn:** [linkedin.com/in/ixaxtavarez](https://www.linkedin.com/in/ixaxtavarez)
-- **GitHub:** [github.com/ixaxtav](https://github.com/ixaxtav)
-- **Email:** [Your Email Address]
-
-I'm always open to discussing new opportunities and collaborations!
-
----
-
-*This `README.md` provides an overview of my developer portfolio, highlighting key projects, skills, and experiences. For more details, please visit my [portfolio website](https://ixaxtavarez.com).*
+After deployment, check the home page, all case studies, `/resume.pdf`, `/robots.txt`, `/sitemap.xml`, security headers, and a mobile viewport. Make sure the live PDF has the current content and its noindex header. Old screenshot URLs should return 404.

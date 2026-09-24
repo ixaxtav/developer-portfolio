@@ -1,5 +1,7 @@
-# TODOs
+# Editorial maintenance
 
-1. **CSP nonce-based inline scripts** — When adding user input/forms, implement nonce-based CSP for inline scripts instead of `unsafe-inline`.
-2. **Optimize source images in /public** — Resize source images to their maximum display dimensions and convert to WebP format to reduce payload.
-3. **Add basic test infrastructure** — Set up vitest with a smoke test to verify the page renders without errors.
+- Update `content/profile.json` and regenerate the public PDF when roles or dates change.
+- Add publishable outcomes only when they can be substantiated; quantitative claims are optional.
+- Review dependency update PRs and the automated checks regularly.
+- Revisit portfolio links and mobile/keyboard usability after content edits.
+- If old screenshots are confirmed to contain real sensitive data, coordinate historical Git/deployment/cache cleanup with the data owner. Current-file removal does not erase past copies.
