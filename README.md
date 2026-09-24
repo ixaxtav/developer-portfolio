@@ -34,7 +34,8 @@ CI runs on pull requests and pushes to main. Dependabot checks npm weekly and Gi
 - `lib/projects.ts`: case-study narratives and conceptual workflows. Describe actual contributions; don't invent performance metrics or publish internal business rules.
 - `app/work/[slug]/page.tsx`: case-study pages.
 - `app/globals.css`: responsive design, visible focus, reduced-motion, and print styles.
-- `public/avatar.jpg`: the only photograph; no operational/customer screenshots are served.
+- `public/avatar.jpg`: the portrait.
+- `public/images/`: case-study images, limited to published marketing material and public data. No operational/customer screenshots are served.
 
 The case studies describe professional work whose source is private. Original workflow diagrams use no customer records, device identifiers, payroll details, or location data.
 
@@ -59,7 +60,7 @@ Inspect the generated PDF for layout and verify its text before committing. The 
 - Vercel still processes infrastructure/request information; see the site's privacy page.
 - Plain `.env` and `.env.*` files are ignored. Public identifiers and public email are intentionally visible.
 
-Previously published screenshots and an older résumé were removed/replaced in September 2026. Ordinary commits do not erase historical Git objects, old deployment URLs, caches, forks, or downloaded copies. Assess those separately if any old content is confirmed sensitive. This repository does not perform destructive history rewrites or delete old deployments automatically.
+Previously published screenshots and an older résumé were removed/replaced in September 2026. The DataRemote and JobCore screenshots showed device identifiers, phone numbers, locations, worker names, and pay, and stay removed; the Instant Debt Advisor marketing image and the ImRecruitable college search (public data) were restored under `public/images/`. Ordinary commits do not erase historical Git objects, old deployment URLs, caches, forks, or downloaded copies. Assess those separately if any old content is confirmed sensitive. This repository does not perform destructive history rewrites or delete old deployments automatically.
 
 ## Deployment
 

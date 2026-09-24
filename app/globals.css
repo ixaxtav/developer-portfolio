@@ -540,6 +540,23 @@ img {
 .case-study > .workflow .workflow-steps li > span:last-child {
   font-size: 14px;
 }
+/* Grayscale until hovered, like the portrait and the original site's project images. */
+.case-image {
+  margin-top: 32px;
+}
+.case-image img {
+  border: 1px solid var(--ink);
+  filter: grayscale(100%);
+  transition: filter 0.25s ease;
+}
+.case-image img:hover {
+  filter: none;
+}
+.case-image figcaption {
+  margin-top: 10px;
+  font: 13px var(--mono);
+  color: var(--muted);
+}
 .case-body {
   max-width: 760px;
   margin-block: 56px;

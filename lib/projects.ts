@@ -11,6 +11,13 @@ export type Project = {
   contributions: { title: string; text: string }[];
   considerations: string;
   diagram: { label: string; detail: string }[];
+  image?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    caption: string;
+  };
 };
 
 export const projects: Project[] = [
@@ -52,6 +59,13 @@ export const projects: Project[] = [
       { label: "Qualify", detail: "Validated service workflows" },
       { label: "Route", detail: "Configurable distribution" },
     ],
+    image: {
+      src: "/images/instant-debt-advisor.jpg",
+      alt: "Instant Debt Advisor marketing image: a phone showing a matched debt management option and potential savings.",
+      width: 1600,
+      height: 900,
+      caption: "Instant Debt Advisor, from AllClear.ai’s published marketing.",
+    },
   },
   {
     slug: "dataremote",
@@ -122,6 +136,13 @@ export const projects: Project[] = [
       { label: "Platform", detail: "Identity & subscriptions" },
       { label: "Coaches", detail: "Recruiting tools" },
     ],
+    image: {
+      src: "/images/imrecruitable-college-search.png",
+      alt: "ImRecruitable college search: filters for division, location, and tuition beside a list of colleges with Favorite and Email buttons.",
+      width: 711,
+      height: 448,
+      caption: "College search in the original ImRecruitable app, built from public college data.",
+    },
   },
 ];
 

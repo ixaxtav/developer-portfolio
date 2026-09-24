@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -54,6 +55,18 @@ export default async function ProjectPage({
         </ul>
       </header>
       <Workflow project={project} />
+      {project.image && (
+        <figure className="case-image">
+          <Image
+            src={project.image.src}
+            alt={project.image.alt}
+            width={project.image.width}
+            height={project.image.height}
+            unoptimized
+          />
+          <figcaption>{project.image.caption}</figcaption>
+        </figure>
+      )}
       <div className="case-body">
         <section>
           <h2>The challenge</h2>
@@ -79,8 +92,9 @@ export default async function ProjectPage({
           <strong>A note on the work</strong>
           <p>
             These are professional projects with private source code. The
-            diagrams illustrate the workflow; they contain no customer records
-            or internal configuration.
+            diagrams illustrate the workflow, and screenshots are limited to
+            published marketing or public data. Neither contains customer
+            records or internal configuration.
           </p>
         </aside>
       </div>

@@ -211,8 +211,15 @@ test("robots and sitemap expose current pages while letting crawlers see PDF noi
   assert.doesNotMatch(sitemap, /resume.pdf/);
 });
 
-test("social preview images and icon are available", async () => {
-  for (const path of ["/opengraph-image", "/twitter-image", "/icon.svg"]) {
+test("social preview, portrait, case-study images, and icon are available", async () => {
+  for (const path of [
+    "/opengraph-image",
+    "/twitter-image",
+    "/icon.svg",
+    "/avatar.jpg",
+    "/images/instant-debt-advisor.jpg",
+    "/images/imrecruitable-college-search.png",
+  ]) {
     const response = await fetch(base + path);
     assert.equal(response.status, 200, path);
     assert.match(response.headers.get("content-type"), /image\//);
