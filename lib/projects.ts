@@ -4,7 +4,6 @@ export type Project = {
   title: string;
   category: string;
   period: string;
-  color: string;
   intro: string;
   outcome: string;
   stack: string[];
@@ -20,8 +19,7 @@ export const projects: Project[] = [
     company: "AllClear.ai",
     title: "Less friction. Better workflows.",
     category: "Workflow engineering & AI integration",
-    period: "2024 - Present",
-    color: "rust",
+    period: "2024 – Present",
     intro:
       "Onboarding, qualification, and lead routing across an embedded partner app, customer portal, and backend services.",
     outcome:
@@ -60,8 +58,7 @@ export const projects: Project[] = [
     company: "DataRemote",
     title: "Device events, made useful.",
     category: "Connected devices & real-time interfaces",
-    period: "2022 - 2024",
-    color: "blue",
+    period: "2022 – 2024",
     intro:
       "Device-management interfaces that connect telecom hardware, backend services, and the people operating them.",
     outcome:
@@ -96,8 +93,7 @@ export const projects: Project[] = [
     company: "ImRecruitable",
     title: "From idea to recruiting platform.",
     category: "Founding development & product delivery",
-    period: "2018 - 2020",
-    color: "green",
+    period: "2018 – 2020",
     intro:
       "The initial college recruiting application: athlete profiles, college discovery, and tools for coaches.",
     outcome:

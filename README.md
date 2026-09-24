@@ -2,7 +2,7 @@
 
 [www.ixaxtavarez.com](https://www.ixaxtavarez.com)
 
-A personal portfolio for my work as a lead full-stack developer. Built with Next.js 16, React 19, TypeScript, and plain CSS. The visual direction is an editorial notebook: warm paper, serif headlines, purposeful diagrams, and readable project narratives.
+A personal portfolio for my work as a lead full-stack developer. Built with Next.js 16, React 19, TypeScript, and plain CSS. The visual direction carries on the original site: a black-and-white masthead, double rules between sections, Roboto Serif for reading, Courier Prime for labels and links, and a yellow highlighter sweep on hover.
 
 ## Develop
 
@@ -34,7 +34,7 @@ CI runs on pull requests and pushes to main. Dependabot checks npm weekly and Gi
 - `lib/projects.ts`: case-study narratives and conceptual workflows. Describe actual contributions; don't invent performance metrics or publish internal business rules.
 - `app/work/[slug]/page.tsx`: case-study pages.
 - `app/globals.css`: responsive design, visible focus, reduced-motion, and print styles.
-- `public/avatar.png`: the only photograph; no operational/customer screenshots are served.
+- `public/avatar.jpg`: the only photograph; no operational/customer screenshots are served.
 
 The case studies describe professional work whose source is private. Original workflow diagrams use no customer records, device identifiers, payroll details, or location data.
 
@@ -55,7 +55,7 @@ Inspect the generated PDF for layout and verify its text before committing. The 
 - Per-request nonce-based script CSP through `proxy.ts`; HTML is dynamically rendered and not shared-cacheable so the nonce stays unique. This trades static HTML caching for stricter script execution. Static assets still cache normally.
 - Inline styles remain permitted for framework-generated attributes; inline scripts require a nonce. No third-party script origins are allowed.
 - Security headers include HSTS, nosniff, framing protection, a restricted permissions policy, and referrer policy.
-- No account system, form handler, analytics SDK, third-party font request, or image-optimization endpoint is used.
+- No account system, form handler, analytics SDK, third-party font request, or image-optimization endpoint is used. `next/font` downloads fonts at build time and serves them from this origin.
 - Vercel still processes infrastructure/request information; see the site's privacy page.
 - Plain `.env` and `.env.*` files are ignored. Public identifiers and public email are intentionally visible.
 

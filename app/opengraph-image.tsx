@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Ixax Tavarez — Lead Full-Stack Developer. Thoughtful software. Useful outcomes.";
+  "Ixax Tavarez, lead full-stack developer.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -11,8 +11,8 @@ export default function OpenGraphImage() {
       style={{
         width: "100%",
         height: "100%",
-        background: "#f7f5ee",
-        color: "#262820",
+        background: "#fff",
+        color: "#000",
         padding: "65px 80px",
         display: "flex",
         flexDirection: "column",
@@ -23,12 +23,12 @@ export default function OpenGraphImage() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          borderBottom: "2px solid #262820",
+          borderBottom: "4px solid #000",
           paddingBottom: 24,
         }}
       >
-        <span style={{ fontSize: 34 }}>ixax tavarez.</span>
-        <span style={{ fontSize: 22 }}>LEAD FULL-STACK DEVELOPER</span>
+        <span style={{ fontSize: 34 }}>Ixax Tavarez</span>
+        <span style={{ fontSize: 24 }}>@ixaxtav</span>
       </div>
       <div
         style={{
@@ -39,8 +39,8 @@ export default function OpenGraphImage() {
           letterSpacing: "-3px",
         }}
       >
-        <span>Thoughtful software.</span>
-        <span style={{ color: "#a4442b" }}>Useful outcomes.</span>
+        <span>Hello World! I’m Ixax,</span>
+        <span>a lead full-stack developer.</span>
       </div>
       <div
         style={{
@@ -49,8 +49,8 @@ export default function OpenGraphImage() {
           fontSize: 23,
         }}
       >
-        <span>React · TypeScript · Python · Go · Node.js</span>
-        <span>ixaxtavarez.com ↗</span>
+        <span>React, TypeScript, Python, Go, Node.js</span>
+        <span>ixaxtavarez.com</span>
       </div>
     </div>,
     size,

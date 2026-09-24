@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main id="main-content" className="page-width prose-page">
-      <p className="eyebrow">A small site. A clear policy.</p>
       <h1>Your visit, your privacy.</h1>
       <p className="case-intro">
         This portfolio is here to show my work and make it easy to get in touch.
@@ -25,7 +24,7 @@ export default function PrivacyPage() {
         Vercel hosts the site and may process ordinary request information,
         including IP addresses, browser details, and requested URLs, to deliver
         and secure it. See{" "}
-        <a href="https://vercel.com/legal/privacy-policy">
+        <a className="link" href="https://vercel.com/legal/privacy-policy">
           Vercel’s privacy policy
         </a>{" "}
         for details about its services.
@@ -38,9 +37,9 @@ export default function PrivacyPage() {
       </p>
       <h2>Questions</h2>
       <p>
-        <a href={`mailto:${profile.email}`}>Email me about privacy</a>.
+        <a className="link" href={`mailto:${profile.email}`}>Email me about privacy</a>.
       </p>
-      <p className="eyebrow">Updated September 24, 2026</p>
+      <p className="meta">Updated September 24, 2026</p>
     </main>
   );
 }

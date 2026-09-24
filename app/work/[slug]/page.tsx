@@ -38,16 +38,15 @@ export default async function ProjectPage({
     ];
   return (
     <main id="main-content" className="case-study page-width">
-      <Link className="back-link" href="/#work">
-        ← All selected work
+      <Link className="link back-link" href="/#work">
+        ← All projects
       </Link>
       <header className="case-header">
-        <p className="eyebrow">
-          {project.company} / {project.period}
+        <p className="meta">
+          {project.company} ({project.period}), {project.category}
         </p>
         <h1>{project.title}</h1>
         <p className="case-intro">{project.intro}</p>
-        <p className="case-category">{project.category}</p>
         <ul className="tags" aria-label="Technologies">
           {project.stack.map((item) => (
             <li key={item}>{item}</li>
@@ -57,28 +56,23 @@ export default async function ProjectPage({
       <Workflow project={project} />
       <div className="case-body">
         <section>
-          <p className="eyebrow">01 / The challenge</p>
-          <h2>The problem behind the product.</h2>
+          <h2>The challenge</h2>
           <p>{project.challenge}</p>
         </section>
         <section>
-          <p className="eyebrow">02 / My contribution</p>
-          <h2>What I built.</h2>
+          <h2>What I built</h2>
           <div className="contributions">
-            {project.contributions.map((item, index) => (
+            {project.contributions.map((item) => (
               <article key={item.title}>
-                <span className="eyebrow">0{index + 1}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
               </article>
             ))}
           </div>
         </section>
         <section>
-          <p className="eyebrow">03 / The outcome</p>
-          <h2>{project.outcome}</h2>
+          <h2>The outcome</h2>
+          <p className="case-outcome">{project.outcome}</p>
           <p>{project.considerations}</p>
         </section>
         <aside className="case-note">
@@ -92,13 +86,11 @@ export default async function ProjectPage({
       </div>
       <nav className="case-next" aria-label="More work">
         <div>
-          <p className="eyebrow">Keep exploring</p>
-          <Link href={`/work/${nextProject.slug}`}>
-            {nextProject.company} <span aria-hidden="true">↗</span>
-          </Link>
+          <p className="meta">Next case study</p>
+          <Link href={`/work/${nextProject.slug}`}>{nextProject.company}</Link>
         </div>
-        <Link className="text-link" href="/#contact">
-          Discuss my work ↗
+        <Link className="link" href="/#contact">
+          Get in touch
         </Link>
       </nav>
     </main>

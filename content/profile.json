@@ -11,8 +11,8 @@
     {
       "company": "AllClear.ai",
       "title": "Lead Developer",
-      "period": "Apr 2024 - Present",
-      "progression": "Lead Developer · Aug 2026 - Present; Senior Full Stack Engineer · Apr 2024 - Aug 2026",
+      "period": "Apr 2024 – Present",
+      "progression": "Lead Developer, Aug 2026 – Present; Senior Full Stack Engineer, Apr 2024 – Aug 2026",
       "technologies": "React, TypeScript, Go, NestJS, Google Cloud",
       "summary": "Building the workflows behind customer onboarding, lead qualification, and partner operations.",
       "bullets": [
@@ -27,7 +27,7 @@
     {
       "company": "DataRemote, Inc.",
       "title": "Software Engineer",
-      "period": "Jan 2022 - Apr 2024",
+      "period": "Jan 2022 – Apr 2024",
       "technologies": "React, TypeScript, Python, Flask, SQLAlchemy, Node.js, Docker",
       "summary": "Connecting device-management interfaces with backend services and live device events.",
       "bullets": [
@@ -39,7 +39,7 @@
     {
       "company": "JobCore Talent",
       "title": "Full-Stack Developer",
-      "period": "Feb 2020 - Dec 2021",
+      "period": "Feb 2020 – Dec 2021",
       "technologies": "React, React Native, Python, Django, PostgreSQL",
       "summary": "Helping employers manage shifts and payroll, and workers manage the work ahead.",
       "bullets": [
@@ -51,7 +51,7 @@
     {
       "company": "ImRecruitable",
       "title": "Founding Developer",
-      "period": "Jan 2018 - Jan 2020",
+      "period": "Jan 2018 – Jan 2020",
       "technologies": "React, Node.js, Express, MongoDB, Stripe",
       "summary": "Built and launched the initial college recruiting application from the ground up.",
       "bullets": [
@@ -95,5 +95,5 @@
       ]
     }
   ],
-  "education": "Bachelor of Science, University of Miami · May 2017"
+  "education": "Bachelor of Science, University of Miami, May 2017"
 }

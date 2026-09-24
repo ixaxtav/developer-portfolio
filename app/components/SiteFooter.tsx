@@ -3,14 +3,22 @@ import profile from "@/content/profile.json";
 
 export function SiteFooter() {
   return (
-    <footer className="site-footer page-width">
-      <p>© {new Date().getFullYear()} Ixax Tavarez</p>
-      <p className="footer-note">Thoughtful software. Useful outcomes.</p>
-      <div>
-        <a href={profile.github}>GitHub ↗</a>
-        <a href={profile.linkedin}>LinkedIn ↗</a>
-        <Link href="/privacy">Privacy</Link>
+    <footer className="site-footer">
+      <div className="page-width">
+        <p>© {new Date().getFullYear()} Ixax Tavarez</p>
+        <div>
+          <a className="link" href={profile.github}>
+            GitHub
+          </a>
+          <a className="link" href={profile.linkedin}>
+            LinkedIn
+          </a>
+          <Link className="link" href="/privacy">
+            Privacy
+          </Link>
+        </div>
       </div>
+      <div className="tv-static" aria-hidden="true" />
     </footer>
   );
 }

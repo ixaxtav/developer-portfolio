@@ -2,11 +2,7 @@ import type { Project } from "@/lib/projects";
 
 export function Workflow({ project }: { project: Project }) {
   return (
-    <figure className={`workflow workflow-${project.color}`}>
-      <div className="workflow-top">
-        <span className="eyebrow">{project.company}</span>
-        <span aria-hidden="true">↗</span>
-      </div>
+    <figure className="workflow">
       <ol className="workflow-steps">
         {project.diagram.map((step, index) => (
           <li key={step.label}>
@@ -16,9 +12,7 @@ export function Workflow({ project }: { project: Project }) {
           </li>
         ))}
       </ol>
-      <figcaption>
-        Conceptual workflow <span aria-hidden="true">/</span> No customer data
-      </figcaption>
+      <figcaption>Conceptual workflow, no customer data</figcaption>
     </figure>
   );
 }
