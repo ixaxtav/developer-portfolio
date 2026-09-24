@@ -338,6 +338,7 @@ em {
   flex-direction: column;
 }
 .workflow {
+  container-type: inline-size;
   --workflow-accent: #9a432e;
   --workflow-bg: #eadad0;
   background: var(--workflow-bg);
@@ -363,28 +364,45 @@ em {
   font-size: 10px;
 }
 .workflow-steps {
+  --step-gap: 12px;
   list-style: none;
   display: flex;
   position: relative;
   padding: 35px 0 29px;
-  gap: 12px;
+  gap: var(--step-gap);
 }
 .workflow-steps li {
   position: relative;
   flex: 1;
   min-width: 0;
-  border-top: 1px solid currentColor;
-  padding-top: 10px;
+  padding-top: 11px;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.workflow-steps li:not(:last-child)::after {
-  content: "→";
+/* Draw the connector and arrowhead on the same axis, independent of font metrics. */
+.workflow-steps li::before {
+  content: "";
   position: absolute;
-  right: -13px;
-  top: -15px;
-  font-size: 17px;
+  left: 0;
+  top: 0;
+  width: calc(100% + var(--step-gap));
+  height: 1px;
+  background: currentColor;
+}
+.workflow-steps li:last-child::before {
+  width: 100%;
+}
+.workflow-steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: calc(0px - var(--step-gap) / 2 - 3px);
+  top: 0.5px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
 }
 .step-index {
   font: 10px var(--mono);
@@ -392,7 +410,7 @@ em {
 }
 .workflow-steps strong {
   font-family: var(--serif);
-  font-size: 23px;
+  font-size: clamp(18px, 7cqi, 29px);
   line-height: 1.4;
   font-weight: 400;
   letter-spacing: -0.03em;
@@ -710,11 +728,11 @@ em {
   padding: 30px 40px;
 }
 .case-study > .workflow .workflow-steps {
-  gap: 40px;
+  --step-gap: 40px;
   padding-block: 40px;
 }
 .case-study > .workflow .workflow-steps strong {
-  font-size: clamp(28px, 4.2vw, 58px);
+  font-size: clamp(18px, 6cqi, 58px);
 }
 .case-study > .workflow .workflow-steps li > span:last-child {
   font-size: 13px;
@@ -846,16 +864,14 @@ em {
     font-size: 65px;
   }
   .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
   .workflow {
     padding: 17px 12px;
   }
   .workflow-steps {
-    gap: 8px;
-  }
-  .workflow-steps strong {
-    font-size: 20px;
+    --step-gap: 12px;
   }
   .workflow-steps li > span:last-child {
     font-size: 9px;
@@ -968,10 +984,7 @@ em {
   }
   .workflow-steps {
     padding-block: 35px;
-    gap: 20px;
-  }
-  .workflow-steps strong {
-    font-size: 29px;
+    --step-gap: 20px;
   }
   .workflow-steps li > span:last-child {
     font-size: 11px;
@@ -1073,7 +1086,7 @@ em {
     padding: 22px 16px;
   }
   .case-study > .workflow .workflow-steps {
-    gap: 16px;
+    --step-gap: 16px;
     padding-block: 26px;
   }
   .case-study > .workflow .workflow-steps li > span:last-child {
@@ -1108,6 +1121,9 @@ em {
   }
 }
 @media (max-width: 380px) {
+  .workflow-steps {
+    --step-gap: 12px;
+  }
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -1133,9 +1149,6 @@ em {
   }
   .hero-actions .text-link {
     font-size: 12px;
-  }
-  .workflow-steps strong {
-    font-size: 25px;
   }
   .contact-inner h2 {
     font-size: 42px;

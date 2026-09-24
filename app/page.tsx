@@ -87,8 +87,7 @@ export default function Home() {
           </div>
           <p>
             Three projects. Different challenges.
-            <br />
-            Ownership across the stack.
+            <br /> Ownership across the stack.
           </p>
         </div>
         <div className="project-grid">
