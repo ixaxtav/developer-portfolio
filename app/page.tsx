@@ -173,6 +173,22 @@ export default function Home() {
         </h2>
         <ul className="side-projects">
           <li>
+            <a className="link" href="https://jobbier.vercel.app">
+              Jobbier
+            </a>{" "}
+            <span>
+              A job-search tracker for a few friends, from saved to offer.
+              Next.js, TypeScript, PostgreSQL.
+            </span>{" "}
+            <a
+              className="link"
+              href="https://github.com/ixaxtav/jobbier"
+              aria-label="Jobbier source code"
+            >
+              Source
+            </a>
+          </li>
+          <li>
             <a className="link" href="https://link-sprout.web.app">
               Link Sprout
             </a>{" "}
@@ -180,7 +196,11 @@ export default function Home() {
               A single home for professional links. SvelteKit, TypeScript,
               Tailwind CSS, Firebase.
             </span>{" "}
-            <a className="link" href="https://github.com/ixaxtav/link-sprout">
+            <a
+              className="link"
+              href="https://github.com/ixaxtav/link-sprout"
+              aria-label="Link Sprout source code"
+            >
               Source
             </a>
           </li>

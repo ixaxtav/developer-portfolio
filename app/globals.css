@@ -439,6 +439,10 @@ img {
 }
 
 /* Side projects */
+.side-projects {
+  display: grid;
+  gap: 18px;
+}
 .side-projects li {
   display: flex;
   flex-wrap: wrap;
